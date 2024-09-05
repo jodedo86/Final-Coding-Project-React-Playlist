@@ -1,23 +1,16 @@
-// The main component that includes the sidebar and item list.
+//Main component that holds the entire app
 
 import Sidebar from "./Sidebar";
-import ItemList from "./Itemlist";
-import testData from "./TestData/";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import ItemList from "./ItemList";
+import ItemCard from "./ItemCard";
+import { playlist } from "./Testdata";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-3">
-          <Sidebar />
-        </div>
-        <div className="col-md-9">
-          <ItemList items={testData} />
-        </div>
-      </div>
+    <div className="container-fluid d-flex p-0">
+      <Sidebar />
+      <ItemList items={playlist} />
     </div>
   );
 }
-
-export default App;

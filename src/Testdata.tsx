@@ -1,4 +1,4 @@
-const testData = [
+export const playlist = [
   { id: 0, title: "Wild Love", artist: "James Bay", album: "Electric Light" },
   {
     id: 1,
@@ -14,4 +14,3 @@ const testData = [
   },
   { id: 3, title: "Numb", artist: "Linkin Park", album: "Meteora" },
 ];
-export default testData;
