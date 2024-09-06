@@ -1,6 +1,10 @@
 // Componant that displays individual song information.
-
-export default function ItemCard({ item }) {
+interface Item {
+  title: string;
+  artist: string;
+  album: string;
+}
+export default function ItemCard({ item }: { item: Item }) {
   return (
     <div className="card text-center p-3">
       <h5 className="card-title">{item.title}</h5>

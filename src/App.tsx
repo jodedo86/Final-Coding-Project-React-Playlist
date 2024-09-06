@@ -2,7 +2,7 @@
 
 import Sidebar from "./Sidebar";
 import ItemList from "./ItemList";
-import ItemCard from "./ItemCard";
+//import ItemCard from "./ItemCard";
 import { playlist } from "./Testdata";
 import "bootstrap/dist/css/bootstrap.min.css";
 
