@@ -9,7 +9,8 @@ interface ItemListProps {
 const ItemList: React.FC<ItemListProps> = ({ items }) => {
   return (
     <div className="container">
-      <p>Hello</p>
+      <h1>My Playlist</h1>
+      <br />
       <div className="row">
         {items.map((item: Item) => (
           <div key={item.id} className="col-md-6 col-lg-3 mb-4">

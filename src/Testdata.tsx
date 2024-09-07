@@ -13,4 +13,16 @@ export const playlist = [
     album: "Bitter Truth",
   },
   { id: 3, title: "Numb", artist: "Linkin Park", album: "Meteora" },
+  {
+    id: 4,
+    title: "Seven Nation Army",
+    artist: "The White Stripes",
+    album: "Elephant ",
+  },
+  {
+    id: 5,
+    title: "Weak and Powerless",
+    artist: "A Perfect Circle",
+    album: "Thirteenth Step ",
+  },
 ];
