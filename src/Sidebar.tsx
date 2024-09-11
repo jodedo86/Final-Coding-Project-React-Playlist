@@ -1,17 +1,20 @@
 // Component displays buttons fields
 
-export default function Sidebar() {
+import React from "react";
+
+interface SidebarProps {
+  onAddItem: () => void;
+}
+
+export default function Sidebar({ onAddItem }: SidebarProps) {
   return (
     <div
       className="bg-primary text-white d-flex flex-column align-items-center p-3"
       style={{ minWidth: "200px" }}
     >
-      <input
-        className="form-control mb-2"
-        type="text"
-        placeholder="+Add Song"
-      />
-      <button className="btn btn-secondary">+ Create Playlist</button>
+      <button className="btn btn-secondary" onClick={onAddItem}>
+        + Add Song
+      </button>
     </div>
   );
 }
