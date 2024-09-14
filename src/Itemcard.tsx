@@ -1,13 +1,16 @@
 // Componant that displays individual song information.
-import React from "react";
+// import React from "react";
 import { Item } from "./types";
 import thumbsDown from "./assets/thumbs-down-solid.svg";
 import thumbsUp from "./assets/thumbs-up-solid.svg";
+//import plussolid from "./assets/plus-solid.svg";
+//import minussolid from "./assets/minus-solid.svg";
 
 interface ItemCardProps {
   item: Item;
   onDelete: (id: number) => void;
   onToggleStar: (id: number) => void;
+  onToggleAdd: (id: number) => void;
 }
 
 export default function ItemCard({
@@ -27,10 +30,14 @@ export default function ItemCard({
         Delete
       </button>
       <button
-        className="btn btn-outline-primary"
+        className="btn btn-outline-info"
         onClick={() => onToggleStar(item.id)}
       >
-        {item.isStarred ? "Unstar" : "Star"}
+        <img
+          src={item.isStarred ? thumbsUp : thumbsDown}
+          alt={item.isStarred ? "thumbs up" : "thumbs down"}
+          width="20"
+        />
       </button>
     </div>
   );

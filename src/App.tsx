@@ -1,13 +1,14 @@
 //Main component that holds the entire app
-import React, { useState } from "react";
+import { useState } from "react";
 import Sidebar from "./Sidebar";
 import ItemList from "./ItemList";
-import { playlist as initialPlaylist } from "./Testdata";
+import { playlist } from "./Testdata";
 import { Item } from "./types";
 import "bootstrap/dist/css/bootstrap.min.css";
+//import "./app.css";
 
 export default function App() {
-  const [list, setList] = useState<Item[]>(initialPlaylist);
+  const [list, setList] = useState<Item[]>(playlist);
 
   // Function to add a new item
   const handleAddItem = () => {
@@ -16,6 +17,8 @@ export default function App() {
       title: "New Song",
       artist: "New Artist",
       album: "New Album",
+
+      isStarred: false,
     };
     setList([...list, newItem]);
   };
@@ -33,6 +36,14 @@ export default function App() {
       )
     );
   };
+
+  //const handleToggleAdd = (id: number) => {
+  //setList(
+  //list.map((item) =>
+  //item.id === id ? { ...item, isAdded: !item.isAdded } : item
+  // )
+  //);
+  //};
 
   return (
     <div className="container-fluid d-flex p-0">

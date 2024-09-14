@@ -1,11 +1,11 @@
 // Component displays buttons fields
 
-import React from "react";
-
+// Define the props interface for the Sidebar component
 interface SidebarProps {
-  onAddItem: () => void;
+  onAddItem: () => void; // Function to handle adding a new item
 }
 
+// Sidebar component that displays input and button for adding items
 export default function Sidebar({ onAddItem }: SidebarProps) {
   return (
     <div

@@ -1,8 +1,8 @@
+// Type definition for an Item
 export interface Item {
-  isFavorite: any;
-  isStarred: any;
   id: number;
   title: string;
   artist: string;
   album: string;
+  isStarred?: boolean; // Optional property to indicate if the item is "starred"
 }

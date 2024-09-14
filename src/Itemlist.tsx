@@ -4,12 +4,14 @@ import React from "react";
 import ItemCard from "./ItemCard";
 import { Item } from "./types";
 
+// Define the props interface for the ItemList component
 interface ItemListProps {
-  items: Item[];
-  onDeleteItem: (id: number) => void;
-  onToggleStar: (id: number) => void;
+  items: Item[]; // Array of items to be shown
+  onDeleteItem: (id: number) => void; // Function to handle item deletion
+  onToggleStar: (id: number) => void; // Function to toggle the "starred" status of an item
 }
 
+// ItemList component that displays a list of items
 const ItemList: React.FC<ItemListProps> = ({
   items,
   onDeleteItem,
@@ -26,6 +28,9 @@ const ItemList: React.FC<ItemListProps> = ({
               item={item}
               onDelete={onDeleteItem}
               onToggleStar={onToggleStar}
+              onToggleAdd={function (_id: number): void {
+                throw new Error("Function not implemented.");
+              }}
             />
           </div>
         ))}

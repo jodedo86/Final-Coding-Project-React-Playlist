@@ -1,3 +1,5 @@
+// Test data representing a playlist of songs
+
 export const playlist = [
   { id: 0, title: "Wild Love", artist: "James Bay", album: "Electric Light" },
   {
