@@ -5,7 +5,7 @@ import ItemList from "./ItemList";
 import { playlist } from "./Testdata";
 import { Item } from "./types";
 import "bootstrap/dist/css/bootstrap.min.css";
-//import "./app.css";
+// Bootswatch v5.3.3 (https://bootswatch.com) Theme: lux- replace bootstrap.min.css file with bootswatch Lux theme file//
 
 export default function App() {
   const [list, setList] = useState<Item[]>(playlist);
