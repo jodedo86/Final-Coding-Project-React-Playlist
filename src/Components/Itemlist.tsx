@@ -1,10 +1,10 @@
 // Component that displays the list of songs.
 
 import React from "react";
-import ItemCard from "./ItemCard";
+import ItemCard from "./Itemcard";
 import { Item } from "./types";
 
-// Define the props interface for the ItemList component
+// Define the props interface for the ItemList component. Receives items, onDeleteItem, and onToggleStar as props.
 interface ItemListProps {
   items: Item[]; // Array of items to be shown
   onDeleteItem: (id: number) => void; // Function to handle item deletion
