@@ -13,7 +13,7 @@ const Sidebar: React.FC = () => {
         Playlist
       </Link>
       <Link to="/add-song" className="btn btn-secondary mb-2 w-100">
-        + Add Song
+        Add Song
       </Link>
       <Link to="/about" className="btn btn-secondary mb-2 w-100">
         About

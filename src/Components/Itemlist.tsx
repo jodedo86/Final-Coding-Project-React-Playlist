@@ -1,14 +1,14 @@
-// src/components/ItemList.tsx
+// Itemlist.tsx
 
 import React from "react";
-import ItemCard from "./ItemCard";
+import ItemCard from "./Itemcard";
 import { Item } from "./types";
-import playlistIcon from "../assets/headphones-solid.svg"; // Import music image
+import playlistIcon from "../assets/headphones-solid.svg";
 
 interface ItemListProps {
   items: Item[];
-  onDeleteItem: (id: string) => void;
-  onToggleStar: (id: string) => void;
+  onDeleteItem: (id: string) => void; // Changed from Promise<void> to void
+  onToggleStar: (id: string) => void; // Changed from Promise<void> to void
 }
 
 const ItemList: React.FC<ItemListProps> = ({
@@ -32,7 +32,7 @@ const ItemList: React.FC<ItemListProps> = ({
         <p>No songs in the playlist. Add some!</p>
       ) : (
         <div className="row">
-          {items.map((item: Item) => (
+          {items.map((item) => (
             <div key={item.id} className="col-md-6 col-lg-4 mb-4">
               <ItemCard
                 item={item}

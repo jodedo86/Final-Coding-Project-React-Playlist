@@ -1,5 +1,6 @@
 // src/components/About.tsx
 
+// Define the About component as a functional component
 const About: React.FC = () => {
   return (
     <div className="container mt-4">

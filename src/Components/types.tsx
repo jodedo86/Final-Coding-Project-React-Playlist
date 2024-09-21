@@ -1,10 +1,10 @@
-// src/types/types.ts
+// src/types.ts
 
 export interface Item {
-  isThumbsUp: any;
-  id: string; // Must be string
+  id: string;
   title: string;
   artist: string;
   album: string;
-  isStarred?: boolean;
+  isStarred: boolean;
+  // Remove isThumbsUp if it’s not required
 }
